@@ -1,0 +1,171 @@
+@keyframes gjnz_title_fade_in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gjnz_title_fade_out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes gjnz_bg_ease_in {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes gjnz_bg_slow_move {
+    from {
+        left: 0;
+    }
+    to {
+        left: -15%;
+    }
+}
+
+.gjnz {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gjnz .title,
+.gjnz .target,
+.gjnz .author {
+    position: absolute;
+    z-index: 2;
+    left: 1rem;
+    top: 30%;
+}
+
+.gjnz .bg {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    background-color: rgb(42, 53, 49);
+}
+
+.gjnz .final .bg {
+    width: 100%;
+}
+
+.gjnz .final .title {
+    color: white;
+    font-size: 2rem;
+}
+
+.gjnz .target,
+.gjnz .author,
+.gjnz .scene:nth-child(2) .title,
+.gjnz .scene:nth-child(3) .title,
+.gjnz .scene:nth-child(4) .title {
+    opacity: 0;
+}
+
+.gjnz .scene:nth-child(2) .bg,
+.gjnz .scene:nth-child(3) .bg,
+.gjnz .scene:nth-child(4) .bg {
+    left: 100%;
+}
+
+.gjnz .scene:nth-child(1) .title {
+    top: 15%;
+    animation: 
+        gjnz_title_fade_out 1s ease 3s forwards;
+}
+
+.gjnz .scene:nth-child(1) .bg {
+    animation: 
+        gjnz_bg_slow_move 3s linear 0s forwards;
+}
+
+.gjnz .scene:nth-child(2) .title {
+    top: 40%;
+    animation: 
+        gjnz_title_fade_in 1s ease 3s forwards,
+        gjnz_title_fade_out 1s ease 7s forwards;
+}
+
+.gjnz .scene:nth-child(2) .bg {
+    animation: 
+        gjnz_bg_ease_in 1s ease 3s forwards,
+        gjnz_bg_slow_move 3s linear 4s forwards;
+}
+
+.gjnz .scene:nth-child(3) .title {
+    top: 15%;
+    animation: 
+        gjnz_title_fade_in 1s ease 7s forwards,
+        gjnz_title_fade_out 1s ease 11s forwards;
+}
+
+.gjnz .scene:nth-child(3) .bg {
+    animation: 
+        gjnz_bg_ease_in 1s ease 7s forwards,
+        gjnz_bg_slow_move 3s linear 8s forwards;
+}
+
+.gjnz .scene:nth-child(4) .title {
+    animation: 
+        gjnz_title_fade_in 1s ease 12s forwards;
+}
+
+.gjnz .scene:nth-child(4) .bg {
+    animation: 
+        gjnz_bg_ease_in 1s ease 11s forwards;
+}
+
+.gjnz .target {
+    top: 55%;
+    color: white;
+    background-color: black;
+    animation: 
+        gjnz_title_fade_in 1s ease 13s forwards;
+}
+
+.gjnz .target a {
+    display: block;
+    padding: 3px 5px;
+    color: inherit;
+    transition: all 0.2s;
+}
+
+.gjnz .target a:hover {
+    letter-spacing: 2px;
+}
+
+.gjnz .author {
+    top: 1rem;
+    color: white;
+    font-size: 12px;
+    animation: 
+        gjnz_title_fade_in 1s ease 13s forwards;
+}
+
+.gjnz .logo {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 1rem;
+    padding: 5px 10px;
+    background-color: black;
+    font-weight: bold;
+}
+
+.gjnz .logo > span {
+    color: white;
+}
