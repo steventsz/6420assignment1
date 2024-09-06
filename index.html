@@ -10,6 +10,13 @@
 
 <body>
   <header class="assignment-header">ISCG6420 Website Assignment - Semester 2, 2024</header>
+  <header>
+	<nav class="assignment-nav">
+		<a href="./files/Parakai.pdf" target="_blank">Parakai.pdf</a>
+		<a class="GJNZpdf" href="./files/Greatjourneysnz.pdf" target="_blank">Greatjourneysnz.pdf</a>
+		<a href="./files/Booking.pdf" target="_blank">Booking.pdf</a>
+	</nav>
+</header>
   <!-- Totally 3 parts of page frame -->
   <div class="frame">
 
@@ -39,13 +46,128 @@
 			</div>
 		</section>
 
-    <!-- booing system of Piha -->
-		<section class="work3">
-    </section>
+    <!-- Booking system of Parakai -->
+	<section class="work3">
+	<div class="booking step_1" id="booking">
+		
+		<div class="progress step_1" id="booking_progress">
+			<div class="selected">Group</div>
+			<div>Customer</div>
+			<div>Facilities</div>
+			<div>T&C</div>
+			<div>Review</div>
+		</div>
+
+		<!-- Page 1: Group Information -->
+		<div class="panel" id="booking_group">
+			<form id="booking_group_form">
+				<label class="field">
+					<p>Number of adults</p>
+					<input type="number" name="adults" min="1" step="1" value="1">
+				</label>
+
+				<label class="field">
+					<p>Number of children</p>
+					<input type="number" name="children" min="0" step="1" value="0">
+				</label>
+
+				<label class="field">
+					<p>Date:</p>
+					<input type="date" name="date">
+				</label>
+			</form>
+
+			<div class="form-btn">
+				<button data-page="2">Next</button>
+			</div>
+		</div>
+
+		<!-- Page 2: Customer Information -->
+		<div class="panel" id="booking_customer">
+			<form id="booking_customer_form">
+				<label class="field">
+					<p>Customer Name:</p>
+					<input type="text" name="name">
+				</label>
+
+				<label class="field">
+					<p>Customer Email:</p>
+					<input type="email" name="email">
+				</label>
+			</form>
+
+			<div class="form-btn">
+				<button data-page="1">Previous</button>
+				<button data-page="3">Next</button>
+			</div>
+		</div>
+
+		<!-- Page 3: Facilities Information -->
+		<div class="panel" id="booking_facilities">
+			<form id="booking_facilities_form">
+				<label class="field inline">
+					<p>Ticket Colour:</p>
+					<input type="color" name="ticket_color">
+				</label>
+				<label class="field line">
+					<p>Optional Storage Locker:</p>
+					<div>
+						<label><input type="radio" name="storage_locker" value="yes"> Yes</label>
+						<label><input type="radio" name="storage_locker" value="no" checked> No</label>
+					</div>
+				</label>
+			</form>
+
+			<div class="form-btn">
+				<button data-page="2">Previous</button>
+				<button data-page="4">Next</button>
+			</div>
+		</div>
+
+		<!-- Page 4: T&C -->
+		<div class="panel" id="booking_t&c">
+			<h2>Terms & Conditions</h2>
+			<div class="terms-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, orci nec ultrices condimentum, orci felis posuere tortor, non sodales purus enim a purus. Integer vehicula consequat nulla, eget feugiat justo mollis sit amet. Nulla facilisi. Donec vehicula velit a orci condimentum, ac malesuada ligula vestibulum. Sed id vestibulum purus, at sollicitudin justo. Morbi luctus metus sit amet venenatis vulputate. Nam bibendum urna sed turpis sodales, eget egestas turpis ultrices. Nullam id ligula vitae mi varius convallis in vel odio.</p>
+				<p>Aliquam erat volutpat. Vivamus volutpat augue sit amet velit gravida, ut cursus libero iaculis. Cras interdum elit sed ultricies vehicula. Curabitur ac dapibus eros, ac pharetra magna. Maecenas at mauris sed tortor vehicula ullamcorper. Duis fringilla, urna a feugiat tempus, nisi nunc suscipit orci, eget venenatis sapien nulla quis neque. Nulla facilisi. Curabitur at augue at turpis scelerisque hendrerit.</p>
+			</div>
+		
+			<form id="booking_review_form">
+				<label class="field inline">
+					<input type="checkbox" name="terms" required>
+					<p>I have read and agree to the Terms & Conditions</p>
+				</label>
+			</form>
+			<div class="form-btn">
+				<button data-page="3">Previous</button>
+				<button data-page="5">Submit</button>
+			</div>
+		</div>
+
+		<!-- Page 5: Review Information -->
+		<div class="panel" id="booking_review">
+			<h2>Booking Review</h2>
+			<div class="review-details">
+				<p>Date of Attendance: <span id="review_date"></span></p>
+				<p>Number of Adults: <span id="review_adults"></span></p>
+				<p>Number of Children: <span id="review_children"></span></p>
+				<p>Customer Name: <span id="review_name"></span></p>
+				<p>Customer Email: <span id="review_email"></span></p>
+				<p>Ticket Colour: <span id="review_ticket_color"></span></p>
+				<p>Optional Storage Locker: <span id="review_storage_locker"></span></p>
+			</div>
+
+			<div class="form-btn">
+				<button data-page="1">Restart</button>
+			</div>
+		</div>
+	</div>
+</section>
+
 
     <!-- Greatjourneysnz AD animation -->
 		<section class="work2" title="double click replay" id="gjnz_container">
-      <div class="gjnz" id="gjnz">
+      		<div class="gjnz" id="gjnz">
 
 				<div class="scene">
 					<h2 class="title">
@@ -58,7 +180,7 @@
 				<div class="scene">
 					<h2 class="title">
 						<p>Local</p>
-            <p>Culture</p>
+            			<p>Culture</p>
 					</h2>
 					<img class="bg" src="./assets/maori.jpg">
 				</div>
@@ -92,5 +214,7 @@
     
   </div>
   <script defer src="./parakai.js"></script>
+  <script src="./gjnz.js"></script>
+  <script src="./booking.js"></script>
 </body>
 </html>

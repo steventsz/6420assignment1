@@ -1,5 +1,6 @@
 @import url("./parakai.css");
 @import url("./gjnz.css");
+@import url("./booking.css");
 html {
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -34,7 +35,7 @@ a:hover{
 	grid-template-areas:
 		"work1 work1"
 		"work3 work2";
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 1fr;
 	grid-template-rows: auto;
 	gap: 1rem;
 	padding: 0 1rem;
@@ -58,4 +59,37 @@ a:hover{
 .work3 {
 	grid-area: work3;
 	height: 40rem;
+}
+
+.assignment-header {
+	width: 100%;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: lightgray;
+	padding: 5px 1rem;
+	
+}
+
+.assignment-nav {
+	height: 3rem;
+	padding: 0 1rem;
+	padding-bottom: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.assignment-nav a {
+	height: 2rem;
+	line-height: 2rem;
+	padding: 0 1rem;
+	background-color: rgb(0, 208, 255);
+	color: lightcyan;
+	border-radius: 0 0 1rem 1rem;
+	text-decoration-line: none;
+	transition: all ease 0.2s;
+}
+.assignment-nav a:hover {
+	padding-top: 2rem;
+}
+.assignment-nav a.GJNZpdf {
+	background-color: rgb(0, 72, 154);
 }

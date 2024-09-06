@@ -1,0 +1,163 @@
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="checkbox"] {
+	width: 100%;
+	height: 3rem;
+	padding: 2px 5px;
+	border: 3px solid rgb(0, 208, 255);
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="checkbox"]:focus {
+	border-color: rgb(0, 208, 255);
+	outline: none;
+}
+
+input[type="checkbox"] {
+	width: 1rem;
+	height: 1rem;
+}
+
+button {
+	height: 3rem;
+	padding: 0 2rem;
+	cursor: pointer;
+	background-color: rgb(0, 208, 255);
+	border: none;
+	color: white;
+	transition: all 0.2s;
+}
+button:hover {
+	background-color: rgb(0, 208, 255);
+}
+button:active {
+	letter-spacing: 5px;
+}
+
+.booking {
+	height: 100%;
+	position: relative;
+	background: linear-gradient(-60deg, rgb(176, 201, 222), rgb(187, 255, 182));
+}
+.booking.step_1 div.panel:nth-child(2),
+.booking.step_2 div.panel:nth-child(3),
+.booking.step_3 div.panel:nth-child(4),
+.booking.step_4 div.panel:nth-child(5),
+.booking.step_5 div.panel:nth-child(6) {
+	height: 100%;
+	padding-top: 6rem;
+}
+
+.booking .progress {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+}
+.booking .progress > div {
+	flex: 1;
+	line-height: 3rem;
+	text-align: center;
+	background-color: rgb(0, 72, 154);
+	color: white;
+	transition: all 0.6s;
+}
+.booking .progress.step_1 > div:nth-child(1),
+.booking .progress.step_2 > div:nth-child(2),
+.booking .progress.step_3 > div:nth-child(3),
+.booking .progress.step_4 > div:nth-child(4),
+.booking .progress.step_5 > div:nth-child(5) {
+	background-color: rgb(0, 208, 255);
+}
+
+.booking .panel {
+	width: 28rem;
+	height: 0;
+	box-sizing: border-box;
+	margin: 0 auto;
+	overflow: hidden;
+	transition: all 0.6s ease-out;
+}
+.booking .field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	gap: 5px;
+}
+.booking .field.line {
+	flex-direction: row;
+	align-items: center;
+}
+
+.booking .field.inline {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#booking_review h2 {
+	text-align: center;
+}
+
+.terms-content {
+	width: 100%; 
+	height: 200px; 
+	overflow-y: scroll; 
+	padding: 10px;
+	border: 1px solid #ccc; 
+	background-color: #f9f9f9; 
+	box-sizing: border-box; 
+	margin-bottom: 15px;
+}
+
+.booking .form-btn {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 1rem;
+}
+
+.booking .review-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	gap: 16px;
+	justify-items: center;
+	align-items: center;
+	padding: 1.5rem;
+	font-size: 1.2rem; 
+}
+.booking .review-details > span:nth-child(odd) {
+	text-align: right;
+	font-weight: bold;
+	width: 100%;
+}
+.booking .review-details > span:nth-child(even) {
+	text-align: left;
+	width: 100%;
+}
+.booking .review-details .color-box {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.booking .review-agreement {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: 1fr 4rem;
+	gap: 5px;
+	padding: 1rem 0;
+}
+

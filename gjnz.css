@@ -65,7 +65,7 @@
 
 .gjnz .final .title {
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .gjnz .target,
@@ -120,6 +120,7 @@
 }
 
 .gjnz .scene:nth-child(4) .title {
+    top: 35%;
     animation: 
         gjnz_title_fade_in 1s ease 12s forwards;
 }
@@ -130,7 +131,7 @@
 }
 
 .gjnz .target {
-    top: 55%;
+    top: 50%;
     color: white;
     background-color: black;
     animation: 
